@@ -6,15 +6,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
-        integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous" />
+    integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styly.css">
 </head>
 
-<body>
-    <header class="jumbotron text-center bg-primary">
-        <h1 class="display-1 text-light">Geometrické výpočty</h1>
+<body class="bg-light">
+    <header class="jumbotron text-center bg-dark">
+        <h1 class="display-1 text-light">Výpočty 3D objektů</h1>
+    
+    
+    
     </header>
     <main class="container">
-        <h2 class="mb-4 p-3 bg-info text-uppercase text-center text-light">
+        <h2 class="mb-4 p-3 bg-dark text-uppercase text-center text-light">
         Krychle
         </h2>
         <div class="container">
@@ -23,13 +27,13 @@
                 <div class="form-group row">
                     <label for="side" class="col-sm-3 col-form-label">Strana <i>a</i> v cm</label>
                     <div class="col-sm-9">
-                        <input type="number" class="form-control" name="side" id="side" value="0" />
+                        <input type="number" class="form-control" name="side" id="side" value="" />
                     </div>
                 </div>
                
                 <div class="form-group row">
                     <div class="offset-sm-3 col-sm-9">
-                        <button type="button" onclick="calc()" class="btn btn-primary">
+                        <button type="button" onclick="calc()" class="btn btn-secondary">
                             Vypočítat
                         </button>
                     </div>
@@ -37,27 +41,37 @@
             </form>
             <hr />
             
-            <div id="result" class="display-4">?</div>
+            <div id="result" class="display-5">?</div>
         </div>
 
 
-
-        <h2 class="mb-4 p-3 bg-info text-uppercase text-center text-light">
+        <h2 class="mb-4 p-3 bg-dark text-uppercase text-center text-light">
             Kvádr
             </h2>
             <div class="container">
                 <form>
                     
                     <div class="form-group row">
-                        <label for="side" class="col-sm-3 col-form-label">Strana <i>a</i> v cm</label>
+                        <label for="sideA" class="col-sm-3 col-form-label">Strana <i>a</i> v cm</label>
                         <div class="col-sm-9">
-                            <input type="number" class="form-control" name="side" id="side" value="0" />
+                            <input type="number" class="form-control" name="sideA" id="sideA" value="" />
                         </div>
                     </div>
-                   
+                    <div class="form-group row">
+                        <label for="sideB" class="col-sm-3 col-form-label">Strana <i>b</i> v cm</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" name="sideB" id="sideB" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="sideC" class="col-sm-3 col-form-label">Strana <i>c</i> v cm</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" name="sideC" id="sideC" value="" />
+                        </div>
+                    </div>
                     <div class="form-group row">
                         <div class="offset-sm-3 col-sm-9">
-                            <button type="button" onclick="calc()" class="btn btn-primary">
+                            <button type="button" onclick="calcB()" class="btn btn-secondary">
                                 Vypočítat
                             </button>
                         </div>
@@ -65,14 +79,40 @@
                 </form>
                 <hr />
                 
-                <div id="result" class="display-4">?</div>
+                <div id="result2" class="display-5">?</div>
             </div>
 
 
+            <h2 class="mb-4 p-3 bg-dark text-uppercase text-center text-light">
+                Koule
+                </h2>
+                <div class="container">
+                    <form>
+                        
+                        <div class="form-group row">
+                            <label for="radius" class="col-sm-3 col-form-label">Poloměr <i>r</i> v cm</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" name="radius" id="radius" value=""/>
+                            </div>
+                        </div>
+                       
+                        <div class="form-group row">
+                            <div class="offset-sm-3 col-sm-9">
+                                <button type="button" onclick="calcC()" class="btn btn-secondary">
+                                    Vypočítat
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <hr />
+                    
+                    <div id="result3" class="display-5">?</div>
+                </div>
     </main>
-    <footer class="container-fluid text-center">
+
+    <footer class="container-fluid text-center bg-dark">
         <hr />
-        <p>&copy; 2020 - IT2</p>
+        <p>Adam Hajdík IT2 &copy;2020</p>
     </footer>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
